@@ -7,7 +7,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 - **A Shiny R Application**: A neuroimaging preprocessing tool with interactive visualization, artifact inspection, and error-handling for clear user guidance.
   ![Tool Overview](assets/images/Basic_UI.png)
   ![Tool Overview with Error Handling Messages](assets/images/Error_Handling.png)
-- **Artifact Viewer**: Launch an external NIfTI artifact viewer for detailed examination of imaging data to include/exclude pre-processing of unwanted neuroimaging data.
+- **Artifact Viewer**: Launch an external NIfTI artifact viewer to provide a detailed examination of imaging data, aiding in the inclusion or exclusion of neuroimaging data for preprocessing.
   ![Artifact Viewer Example](assets/images/NIfTI_Viewer_Dashboard.png)
 - **Interactive Visualization**: Inspect preprocessing results with slice-by-slice navigation and real-time updates.
 - **Brain Extraction**: Automated skull-stripping of MRI scans to isolate brain tissue.
