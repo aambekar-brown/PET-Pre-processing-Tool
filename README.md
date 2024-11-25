@@ -13,9 +13,9 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 - **Brain Extraction**: Automated skull-stripping of MRI scans to isolate brain tissue.
   ![Brain Extraction Example](assets/images/Brain_Extraction.png)
 - **MNI Template Registration**: Align MRI scans to the MNI standard space for consistent spatial analysis.
-  ![MNI Template Registration Example](assets/images/MRI_Template_Registeration.png)
+  ![MNI Template Registration Example](assets/images/MRI_Template_Registration.png)
 - **MRI-PET Co-registration**: Aligns PET scans with corresponding MRI scans for integrated analysis.
-  ![MRI-PET Co-Registration Example](assets/images/MRI-PET_CoRegisteration.png)
+  ![MRI-PET Co-Registration Example](assets/images/MRI-PET_CoRegistration.png)
 - **COMBAT Harmonization**: Reduces scanner and site effects in neuroimaging data using the Combating Batch Effects (COMBAT) algorithm.
   ![COMBAT Harmonization Example](assets/images/COMBAT_Harmonization.png)
 - **RAVEL Normalization**: Normalizes PET scan intensities to reduce unwanted variations using the Removing inter-subject technical variability in magnetic resonance imaging studies (RAVEL) algorithm.
