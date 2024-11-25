@@ -1,0 +1,80 @@
+## Setting Up the WSL Environment
+
+Follow these instructions to set up the required environment for running the PET Pre-Processing Tool on a Windows machine using WSL.
+
+### Installing WSL on Windows
+
+1. Open a terminal with administrative privileges.
+
+2. Install WSL with Ubuntu 22.04:
+	wsl --install -d Ubuntu-22.04
+
+3. Launch WSL:
+	wsl -d Ubuntu-22.04
+
+4. Installing R
+	ulimit -n 4096
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+	sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+	sudo apt update
+	sudo apt install r-base
+	R --version
+
+5.  Installing R Packages along with their dependencies
+	install.packages("fslr")
+	install.packages("devtools")
+	source("https://neuroconductor.org/neurocLite.R")
+	neuro_install('ITKR')
+	neuro_install("ANTsRCore")
+	neuro_install("ANTsR")
+	neuro_install("extrantsr")
+	install.packages(c("shinyFiles", "reticulate", "rgl", "png", "readxl"))
+		if (!requireNamespace("BiocManager", quietly = TRUE))
+    		install.packages("BiocManager")
+	BiocManager::install("sva")
+	install.packages(c("shinyFiles", "reticulate", "rgl", "png", "readxl"))
+
+
+6. Installing CMake
+	sudo -E add-apt-repository -y ppa:george-edison55/cmake-3.x
+	sudo -E apt-get update
+	sudo apt-get install cmake  --> sudo snap install cmake --classic
+	
+
+7. Download the FSL installer or install using the provided fslinstaller.py file
+	python3 fslinstaller.py
+	export FSLDIR=/home/USERNAME/fsl
+	source $FSLDIR/etc/fslconf/fsl.sh
+	export PATH=$PATH:$FSLDIR/bin
+
+
+8. Installing NeuroCombat
+	- Set up the library path
+		mkdir -p ~/R/x86_64-pc-linux-gnu-library/4.4
+	- Update .libPaths() in R
+		.libPaths(c("~/R/x86_64-pc-linux-gnu-library/4.4", .libPaths()))
+	- Save the library path in .Rprofile
+		echo '.libPaths(c("~/R/x86_64-pc-linux-gnu-library/4.4", .libPaths()))' >> ~/.Rprofile
+	- Install the package in R
+		remotes::install_github("jfortin1/neuroCombat_Rpackage")
+
+9. Installing RAVEL
+	- Set up the library path:
+		mkdir -p ~/R/x86_64-pc-linux-gnu-library/4.4
+	- Update .libPaths() in R
+		.libPaths(c("~/R/x86_64-pc-linux-gnu-library/4.4", .libPaths()))
+	- Save the library path in .Rprofile
+		echo '.libPaths(c("~/R/x86_64-pc-linux-gnu-library/4.4", .libPaths()))' >> ~/.Rprofile
+	- Install the required packages and RAVEL
+		BiocManager::install(c("SummarizedExperiment", "Biobase", "GenomicRanges", "IRanges"), force = TRUE)
+		devtools::install_github("jfortin1/RAVEL")
+
+
+10. Install Python 3 and pip
+	sudo apt update
+	sudo apt install python3-pip
+
+
+11. Install the required Python libraries
+	pip3 install dash pandas nibabel scipy
+

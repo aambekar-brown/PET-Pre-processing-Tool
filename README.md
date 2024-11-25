@@ -4,7 +4,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 
 ## Features
 
-- **A Shiny R Application**: A tool for automated neuroimaging preprocessing with interactive visualization, artifact inspection and error handling capabilities for smooth execution, with clear and informative messages displayed in the output console for user guidance.
+- **A Shiny R Application**: A neuroimaging preprocessing tool with interactive visualization, artifact inspection, and error-handling for clear user guidance.
   ![Tool Overview](assets/images/Basic_UI.png)
   ![Tool Overview with Error Handling Messages](assets/images/Error_Handling.png)
 - **Artifact Viewer**: Launch an external NIfTI artifact viewer for detailed examination of imaging data to include/exclude pre-processing of unwanted neuroimaging data.
@@ -43,11 +43,24 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 - **FSL**: Required for image registration using tools like FLIRT.
 - **ANTs**: Used for advanced normalization techniques.
 - **Python 3**: For the NIfTI artifact viewer and Python-based integrations.
+- **wsl Ubuntu-20.04**:  Required for running the tool on Windows systems.
+- **CMake**: Necessary for building and managing dependencies during tool setup.
 
 ## Installation
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-2. 
+   git clone https://github.com/aambekar-brown/PET-Pre-processing-Tool.git
+   ```
+2. Set-up the required WSL environment, see the Instructions to Set-up the WSL Environment.txt for details.
+3. **Launch the WSL environment**:
+   ```bash
+   wsl -d Ubuntu-20.04 --user <USERNAME>
+   ```
+4. **Start the application**:
+   ```bash
+   Rscript PET_Pre-Processing_Tool.R
+   ```
+5. ***Access the Application**: Open the displayed URL in your preferred web browser.
+
 
