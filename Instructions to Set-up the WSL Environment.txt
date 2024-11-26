@@ -10,7 +10,7 @@ Follow these instructions to set up the required environment for running the PET
 	wsl --install -d Ubuntu-20.04
 
 3. Launch WSL:
-	wsl -d Ubuntu-20.04
+	wsl -d Ubuntu-20.04 --user <USERNAME>
 
 4. Installing R
 	ulimit -n 4096
