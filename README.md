@@ -52,12 +52,13 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
    ```bash
    git clone https://github.com/aambekar-brown/PET-Pre-processing-Tool.git
    ```
-2. Set-up the required WSL environment, see **Set-up the WSL Environment.txt** for details.
+2. **Set-up WSL environment**
+   - Follow instructions present in **Set-up the WSL Environment.txt** for setting up a WSL enviornment with required packages.
    - Launch the WSL environment:
      ```bash
      wsl -d Ubuntu-20.04 --user <USERNAME>
      ```
-4. Alternatively, download an existing WSL state with all required packages and software suits.
+3. **Alternatively**, download an existing WSL state with all required packages and software suites.
    - Download WSL state as a .tar file from here:
    - Import WSL state as follows:
      ```bash
@@ -67,11 +68,11 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
      ```bash
      wsl d <CustomWSLName>  --user pettooluser
      ```
-5. **Start the application**:
+4. **Start the application**:
    ```bash
    Rscript PET_Pre-Processing_Tool.R
    ```
-6. **Access the Application**: Open the displayed URL in your preferred web browser.
+5. **Access the Application**: Open the displayed URL in your preferred web browser.
 
 ## Citations:
 - Jenkinson M, Beckmann CF, Behrens TE, Woolrich MW, Smith SM (2012). “FSL.” Neuroimage, 62(2), 782–790.
