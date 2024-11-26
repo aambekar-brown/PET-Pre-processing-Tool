@@ -20,7 +20,13 @@ Follow these instructions to set up the required environment for running the PET
 	sudo apt install r-base
 	R --version
 
-5.  Installing R Packages along with their dependencies
+5. Install Dependencies
+	sudo apt-get update
+	sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev
+	sudo apt-get install -y libfontconfig1-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+	sudo apt-get install build-essential libcurl4-gnutls-dev libxml2-dev libssl-dev libgit2-dev
+
+6.  Install R Packages
 	install.packages("fslr")
 	install.packages("devtools")
 	source("https://neuroconductor.org/neurocLite.R")
@@ -35,20 +41,20 @@ Follow these instructions to set up the required environment for running the PET
 	install.packages(c("shinyFiles", "reticulate", "rgl", "png", "readxl"))
 
 
-6. Installing CMake
+7. Install CMake
 	sudo -E add-apt-repository -y ppa:george-edison55/cmake-3.x
 	sudo -E apt-get update
 	sudo apt-get install cmake  --> sudo snap install cmake --classic
 	
 
-7. Download the FSL installer or install using the provided fslinstaller.py file
+8. Download the FSL installer or install using the provided fslinstaller.py file
 	python3 fslinstaller.py
 	export FSLDIR=/home/USERNAME/fsl
 	source $FSLDIR/etc/fslconf/fsl.sh
 	export PATH=$PATH:$FSLDIR/bin
 
 
-8. Installing NeuroCombat
+9. Install NeuroCombat
 	- Set up the library path
 		mkdir -p ~/R/x86_64-pc-linux-gnu-library/4.4
 	- Update .libPaths() in R
@@ -58,7 +64,7 @@ Follow these instructions to set up the required environment for running the PET
 	- Install the package in R
 		remotes::install_github("jfortin1/neuroCombat_Rpackage")
 
-9. Installing RAVEL
+10. Install  RAVEL
 	- Set up the library path:
 		mkdir -p ~/R/x86_64-pc-linux-gnu-library/4.4
 	- Update .libPaths() in R
@@ -70,11 +76,11 @@ Follow these instructions to set up the required environment for running the PET
 		devtools::install_github("jfortin1/RAVEL")
 
 
-10. Install Python 3 and pip
+11. Install Python 3 and pip
 	sudo apt update
 	sudo apt install python3-pip
 
 
-11. Install the required Python libraries
+12. Install the required Python libraries
 	pip3 install dash pandas nibabel scipy
 
