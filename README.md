@@ -40,7 +40,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 - **Utilities**: `fslr`, `shinyFiles`, `reticulate`, `readxl`
 
 ### Python Packages
-- **Data Processing**: `pandas` `nibabel` `scipy`
+- **Data Processing**: `pandas`, `nibabel`, `scipy`
 - **Visualization**: `dash`
 
 ### External Tools
