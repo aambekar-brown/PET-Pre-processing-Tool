@@ -48,7 +48,7 @@ Follow these instructions to set up the required environment for running the PET
 
 8. Download the FSL installer or install using the provided fslinstaller.py file with the repository:
 	python3 /path/to/fslinstaller.py
-	export FSLDIR=/home/USERNAME/fsl
+	export FSLDIR=/home/<USERNAME>/fsl
 	source $FSLDIR/etc/fslconf/fsl.sh
 	export PATH=$PATH:$FSLDIR/bin
 
