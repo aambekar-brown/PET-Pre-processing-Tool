@@ -59,7 +59,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
      wsl -d Ubuntu-20.04 --user <USERNAME>
      ```
 3. **Alternatively, download an existing WSL state** with all required packages and software suites.
-   - Download WSL state as a .tar file from here:
+   - Download WSL state as a .tar file from here: https://drive.google.com/file/d/1vQvLXPSX5VNUDhR811YKWhJwWW6bG6C4/view?usp=sharing
    - Import WSL state as follows:
      ```bash
      wsl --import <CustomWSLName> <InstallLocation> <FileName>
