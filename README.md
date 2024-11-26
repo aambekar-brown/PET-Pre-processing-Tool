@@ -48,17 +48,17 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 
 ## Installation
 
-1. **Clone the Repository**:
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/aambekar-brown/PET-Pre-processing-Tool.git
    ```
-2. **Set-up WSL environment**
-   - Follow instructions present in **Set-up the WSL Environment.txt** for setting up a WSL enviornment with required packages.
+2. **Set-up a WSL environment**
+   - Follow the instructions in 'Set-up the WSL Environment.txt' to set up a WSL environment with the required packages.
    - Launch the WSL environment:
      ```bash
      wsl -d Ubuntu-20.04 --user <USERNAME>
      ```
-3. **Alternatively**, download an existing WSL state with all required packages and software suites.
+3. **Alternatively, download an existing WSL state** with all required packages and software suites.
    - Download WSL state as a .tar file from here:
    - Import WSL state as follows:
      ```bash
