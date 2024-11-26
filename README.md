@@ -66,7 +66,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
      ```
    - Launch the WSL environment:
      ```bash
-     wsl d <CustomWSLName>  --user pettooluser
+     wsl -d <CustomWSLName>  --user pettooluser
      ```
 4. **Start the application**:
    ```bash
