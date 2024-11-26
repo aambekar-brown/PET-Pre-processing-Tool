@@ -70,7 +70,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
      ```
 4. **Start the application**:
    ```bash
-   Rscript PET_Pre-Processing_Tool.R
+   Rscript /path/to/PET-Pre-processing-Tool/PET_Pre-Processing_Tool.R
    ```
 5. **Access the Application**: Open the displayed URL in your preferred web browser.
 
