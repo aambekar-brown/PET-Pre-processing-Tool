@@ -35,8 +35,7 @@ Follow these instructions to set up the required environment for running the PET
 	neuro_install("ANTsR")
 	neuro_install("extrantsr")
 	install.packages(c("shinyFiles", "reticulate", "rgl", "png", "readxl"))
-		if (!requireNamespace("BiocManager", quietly = TRUE))
-    		install.packages("BiocManager")
+	install.packages("BiocManager")
 	BiocManager::install("sva")
 	install.packages(c("shinyFiles", "reticulate", "rgl", "png", "readxl"))
 
