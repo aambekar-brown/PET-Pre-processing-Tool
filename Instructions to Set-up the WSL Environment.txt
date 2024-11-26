@@ -43,7 +43,7 @@ Follow these instructions to set up the required environment for running the PET
 7. Install CMake
 	sudo -E add-apt-repository -y ppa:george-edison55/cmake-3.x
 	sudo -E apt-get update
-	sudo apt-get install cmake  --> sudo snap install cmake --classic
+	sudo apt-get install cmake
 	
 
 8. Download the FSL installer or install using the provided fslinstaller.py file
