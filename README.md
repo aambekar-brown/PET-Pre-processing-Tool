@@ -43,7 +43,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
 - **FSL**: Required for image registration using tools like FLIRT.
 - **ANTs**: Used for advanced normalization techniques.
 - **Python 3**: For the NIfTI artifact viewer and Python-based integrations.
-- **wsl Ubuntu-20.04**:  Required for running the tool on Windows systems.
+- **WSL Ubuntu-20.04**:  Required for running the tool on Windows systems.
 - **CMake**: Necessary for building and managing dependencies during tool setup.
 
 ## Installation
@@ -53,14 +53,33 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
    git clone https://github.com/aambekar-brown/PET-Pre-processing-Tool.git
    ```
 2. Set-up the required WSL environment, see **Set-up the WSL Environment.txt** for details.
-3. **Launch the WSL environment**:
-   ```bash
-   wsl -d Ubuntu-20.04 --user <USERNAME>
-   ```
-4. **Start the application**:
+   - Launch the WSL environment:
+     ```bash
+     wsl -d Ubuntu-20.04 --user <USERNAME>
+     ```
+4. Alternatively, download an existing WSL state with all required packages and software suits.
+   - Download WSL state as a .tar file from here:
+   - Import WSL state as follows:
+     ```bash
+     wsl --import <CustomWSLName> <InstallLocation> <FileName>
+     ```
+   - Launch the WSL environment:
+     ```bash
+     wsl d <CustomWSLName>  --user pettooluser
+     ```
+5. **Start the application**:
    ```bash
    Rscript PET_Pre-Processing_Tool.R
    ```
-5. **Access the Application**: Open the displayed URL in your preferred web browser.
+6. **Access the Application**: Open the displayed URL in your preferred web browser.
+
+## Citations:
+- Jenkinson M, Beckmann CF, Behrens TE, Woolrich MW, Smith SM (2012). “FSL.” Neuroimage, 62(2), 782–790.
+- Fortin JP, Sweeney EM, Muschelli J, Crainiceanu CM, Shinohara RT; Alzheimer's Disease Neuroimaging Initiative. Removing inter-subject technical variability in magnetic resonance imaging studies. Neuroimage. 2016 May 15;132:198-212. doi: 10.1016/j.neuroimage.2016.02.036. Epub 2016 Feb 23. PMID: 26923370; PMCID: PMC5540379.
+- Jean-Philippe Fortin, Nicholas Cullen, Yvette I. Sheline, Warren D. Taylor, Irem Aselcioglu, Philip A. Cook, Phil Adams, Crystal Cooper, Maurizio Fava, Patrick J. McGrath, Melvin McInnis, Mary L. Phillips, Madhukar H. Trivedi, Myrna M. Weissman, Russell T. Shinohara. Harmonization of cortical thickness measurements across scanners and sites. NeuroImage, 167, 104-120, 2018
+- Avants BB, Tustison NJ, Song G, Cook PA, Klein A, Gee JC. A reproducible evaluation of ANTs similarity metric performance in brain image registration. Neuroimage. 2011 Feb 1;54(3):2033-44. doi: 10.1016/j.neuroimage.2010.09.025. Epub 2010 Sep 17. PMID: 20851191; PMCID: PMC3065962.
+- Muschelli, J., Sweeney, E. M., Lindquist, M. A., & Crainiceanu, C. M. (2015). fslr: Connecting the FSL Software with R. The R Journal, 7(1), 163-175.
+- Muschelli, J. (2019). neurobase: Basic Functions for Neuroimaging Data. R package version 1.28.0.
+- Muschelli, J. (2019). extrantsr: Extra ANTsR Functions. R package version 3.6.0.
 
 
