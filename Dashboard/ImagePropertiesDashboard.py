@@ -8,6 +8,7 @@ import nibabel as nib
 import numpy as np
 import os
 import scipy.stats as stats
+import sys
 
 # Function to load NIfTI files and compute numerical properties
 
@@ -101,6 +102,9 @@ def update_output(list_of_contents, list_of_names):
         return 'Data loaded successfully', line_fig, data, columns
     return 'Upload NIfTI files to view properties.', {}, [], []
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    # Read the port from the command line
+    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8050
+    # Start the app with the specified port
+    app.run_server(host="0.0.0.0", port=port, debug=True)
 
