@@ -22,7 +22,7 @@ A Shiny R application for automated preprocessing of neuroimaging data. This too
   ![RAVEL Normalization Example](assets/images/RAVEL_Normalization.png)
 
 
-- ## Folder Structure
+## Folder Structure
 
 - `templates/`: Contains MNI template files for registration.
 - `Dashboard/`: Contains a python code to display and export NIfTI image properties.
