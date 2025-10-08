@@ -35,7 +35,7 @@ ui <- fluidPage(
       }
     "))
   ),
-  titlePanel("PET Pre-processing Tool", windowTitle = "PET Pre-processing Tool"),
+  titlePanel("TRAECR: PET Pre-processing Tool", windowTitle = "PET Pre-processing Tool"),
   
   wellPanel(
     div(
