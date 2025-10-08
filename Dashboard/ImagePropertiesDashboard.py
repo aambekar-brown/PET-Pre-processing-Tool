@@ -32,7 +32,6 @@ def load_nifti_data(contents, filename):
         max_intensity = np.max(img_data)
         min_intensity = np.min(img_data)
         range_intensity = max_intensity - min_intensity
-        coeff_variation = std_intensity / mean_intensity if mean_intensity != 0 else np.nan
 
         # Histogram for non-zero voxels
         hist_nonzero, bin_edges_nonzero = np.histogram(img_data_nonzero, bins=100)
@@ -49,9 +48,6 @@ def load_nifti_data(contents, filename):
 
         # Robust Mean Absolute Deviation
         robust_mad = np.median(np.abs(img_data_nonzero - np.median(img_data_nonzero)))
-
-        # Energy
-        energy = np.sum(img_data_nonzero ** 2)
 
         # Root Mean Square
         rms = np.sqrt(np.mean(img_data_nonzero ** 2))
@@ -112,6 +108,20 @@ app.layout = html.Div([
         }),
         multiple=True
     ),
+    # ===== ADDED: toggle for original vs z-score =====
+    html.Div([
+        html.Span("Value scale: ", style={'margin-right': '10px', 'fontWeight': 'bold'}),
+        dcc.RadioItems(
+            id='value-scale',
+            options=[
+                {'label': 'Original', 'value': 'original'},
+                {'label': 'Z-score', 'value': 'zscore'}
+            ],
+            value='original',
+            inline=True
+        )
+    ], style={'margin': '10px 0 20px 0'}),
+    # =================================================
     html.Div(id='output-data-upload', style={
         'margin-top': '20px',
         'margin-bottom': '20px'
@@ -159,10 +169,11 @@ app.layout = html.Div([
      Output('line-plot', 'figure'),
      Output('data-table', 'data'),
      Output('data-table', 'columns')],
-    [Input('upload-data', 'contents')],
+    [Input('upload-data', 'contents'),
+     Input('value-scale', 'value')],  # ADDED
     [State('upload-data', 'filename')]
 )
-def update_output(list_of_contents, list_of_names):
+def update_output(list_of_contents, scale_mode, list_of_names):  # ADDED scale_mode
     if list_of_contents is not None:
         data = []
         for c, n in zip(list_of_contents, list_of_names):
@@ -172,6 +183,18 @@ def update_output(list_of_contents, list_of_names):
         df = pd.DataFrame(data)
         if df.empty:
             return 'No NIfTI files found.', {}, [], []
+
+        # ===== ADDED: apply z-score per property across files when selected =====
+        if scale_mode == 'zscore':
+            numeric_cols = [c for c in df.columns if c != 'File Name']
+            for col in numeric_cols:
+                col_std = df[col].std()
+                if pd.notna(col_std) and col_std != 0:
+                    df[col] = (df[col] - df[col].mean()) / col_std
+                else:
+                    df[col] = 0.0
+        # ======================================================================
+
         df_melted = df.melt(
             id_vars=['File Name'],
             var_name='Property',
@@ -186,9 +209,9 @@ def update_output(list_of_contents, list_of_names):
             template='plotly_white'  # Improved plot appearance
         )
         line_fig.update_layout(
-            title='Properties of NIfTI Files',
+            title='Properties of NIfTI Files' + (' (Z-score)' if scale_mode == 'zscore' else ''),
             xaxis_title='Property',
-            yaxis_title='Value',
+            yaxis_title='Z-score' if scale_mode == 'zscore' else 'Value',
             xaxis=dict(showgrid=True),  # Show gridlines on x-axis
             yaxis=dict(showgrid=True),  # Show gridlines on y-axis
             font=dict(
