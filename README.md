@@ -7,11 +7,16 @@ TRAECR, which stands for Template Registration, MRI-PET Co-registration, Anatomi
 - **A Shiny R Application**: A neuroimaging preprocessing tool with interactive visualization and artifact inspection dashboard.
   ![Tool Overview](assets/images/Basic_UI.png)
 - **Artifact Viewer**: Launch an external NIfTI artifact viewer to provide a detailed examination of imaging data, aiding in the inclusion or exclusion of neuroimaging data for preprocessing.
-  ![Artifact Viewer Example](assets/images/Dashboard.png)
-  ![Artifact Viewer Example](assets/images/Dashboard_2.png)
-  ![Artifact Viewer Example](assets/images/Dashboard_3.png)
-  ![Artifact Viewer Example](assets/images/Dashboard_flagged.png)
-  ![Artifact Viewer Example](assets/images/DICOM_metadata_viewer.png)
+  - QC Overview tab of the interactive NIfTI Image Properties QC Dashboard for MRI/PET scans.
+    ![Artifact Viewer Example](assets/images/Dashboard.png)
+  - Interpretation \& Guidelines tab of the NIfTI Image Properties QC Dashboard.
+    ![Artifact Viewer Example](assets/images/Dashboard_2.png)
+  - Full Table tab of the NIfTI Image Properties QC Dashboard.
+    ![Artifact Viewer Example](assets/images/Dashboard_3.png)
+  - Interactive visual follow-up for a selected heatmap outlier.
+    ![Artifact Viewer Example](assets/images/Dashboard_flagged.png)
+  - Metadata tab for DICOM header inspection within the dashboard.
+    ![Artifact Viewer Example](assets/images/DICOM_metadata_viewer.png)
 - **Interactive Visualization**: Inspect preprocessing results with slice-by-slice navigation and real-time updates.
   - **Brain Extraction**: Automated skull-stripping of MRI scans to isolate brain tissue.
     ![Brain Extraction Example](assets/images/Brain_Extraction.png)
