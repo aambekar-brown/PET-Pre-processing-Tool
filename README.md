@@ -48,7 +48,7 @@ TRAECR \(Template Registration, MRI-PET Co-registration, Anatomical Brain Extrac
 - **Utilities**: `fslr`, `shinyFiles`, `reticulate`, `readxl`
 
 ### Python Packages
-- **Data Processing**: `pandas`, `nibabel`, `scipy`
+- **Data Processing**: `pandas`, `nibabel`, `scipy`, `pydicom`
 - **Visualization**: `dash`
 
 ### External Tools
