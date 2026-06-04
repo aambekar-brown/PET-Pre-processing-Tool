@@ -1,6 +1,6 @@
 # TRAECR: PET Pre-processing Tool
 
-TRAECR \(Template Registration, MRI-PET Co-registration, Anatomical Brain Extraction, and COMBAT/RAVEL Harmonization\) is an R Shiny application designed to automate and standardize key preprocessing steps for neuroimaging data. The tool supports paired MRI and PET workflows by streamlining anatomical brain extraction, MRI-to-template registration, PET-to-MRI co-registration, spatial normalization to MNI space, SUVR-based PET preprocessing, and downstream harmonization or normalization using COMBAT and RAVEL. TRAECR provides a user-friendly interface for reproducible preprocessing while reducing the need for manual command-line execution across multiple imaging tools.
+TRAECR \(Template Registration, MRI-PET Co-registration, Anatomical Brain Extraction, and COMBAT/RAVEL Harmonization\) is an R Shiny application designed to automate and standardize key preprocessing steps for neuroimaging data. The tool supports paired MRI and PET workflows by streamlining anatomical brain extraction, MRI-to-template registration, PET-to-MRI co-registration, spatial normalization to MNI space, and downstream harmonization or normalization using COMBAT and RAVEL. TRAECR provides a user-friendly interface for reproducible preprocessing while reducing the need for manual command-line execution across multiple imaging tools.
 
 ## Features
 
