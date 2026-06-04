@@ -80,6 +80,6 @@ Follow these instructions to set up the required environment for running the PET
 	sudo apt install python3-pip
 
 
-12. Install the required Python libraries:
-	pip3 install dash pandas nibabel scipy
+12. Install the required Python libraries
+	pip3 install dash pandas nibabel scipy pydicom
 
