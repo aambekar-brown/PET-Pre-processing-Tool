@@ -1,25 +1,28 @@
 # TRAECR: PET Pre-processing Tool
 
-TRAECR (Template registration, MRI-PET co-Registration, Anatomical brain Extraction and COMBAT/RAVEL harmonization) is a Shiny R application for automated preprocessing of neuroimaging data. This tool supports PET and MRI scans, streamlining brain extraction, MNI template registration, MRI-PET co-registration, COMBAT harmonization, and RAVEL normalization.
+TRAECR, which stands for Template Registration, MRI-PET Co-registration, Anatomical Brain Extraction, and COMBAT/RAVEL Harmonization, is an R Shiny application designed to automate and standardize key preprocessing steps for neuroimaging data. The tool supports paired MRI and PET workflows by streamlining anatomical brain extraction, MRI-to-template registration, PET-to-MRI co-registration, spatial normalization to MNI space, SUVR-based PET preprocessing, and downstream harmonization or normalization using COMBAT and RAVEL. TRAECR provides a user-friendly interface for reproducible preprocessing while reducing the need for manual command-line execution across multiple imaging tools.
 
 ## Features
 
-- **A Shiny R Application**: A neuroimaging preprocessing tool with interactive visualization, artifact inspection, and error-handling for clear user guidance.
+- **A Shiny R Application**: A neuroimaging preprocessing tool with interactive visualization and artifact inspection dashboard.
   ![Tool Overview](assets/images/Basic_UI.png)
-  ![Tool Overview with Error Handling Messages](assets/images/Error_Handling.png)
 - **Artifact Viewer**: Launch an external NIfTI artifact viewer to provide a detailed examination of imaging data, aiding in the inclusion or exclusion of neuroimaging data for preprocessing.
   ![Artifact Viewer Example](assets/images/Dashboard.png)
+  ![Artifact Viewer Example](assets/images/Dashboard_2.png)
+  ![Artifact Viewer Example](assets/images/Dashboard_3.png)
+  ![Artifact Viewer Example](assets/images/Dashboard_flagged.png)
+  ![Artifact Viewer Example](assets/images/DICOM_metadata_viewer.png)
 - **Interactive Visualization**: Inspect preprocessing results with slice-by-slice navigation and real-time updates.
-- **Brain Extraction**: Automated skull-stripping of MRI scans to isolate brain tissue.
-  ![Brain Extraction Example](assets/images/Brain_Extraction.png)
-- **MNI Template Registration**: Align MRI scans to the MNI standard space for consistent spatial analysis.
-  ![MNI Template Registration Example](assets/images/MRI_Template_Registration.png)
-- **MRI-PET Co-registration**: Aligns PET scans with corresponding MRI scans for integrated analysis.
-  ![MRI-PET Co-Registration Example](assets/images/MRI-PET_CoRegistration.png)
-- **COMBAT Harmonization**: Reduces scanner and site effects in neuroimaging data using the Combating Batch Effects (COMBAT) algorithm.
-  ![COMBAT Harmonization Example](assets/images/COMBAT_Harmonization.png)
-- **RAVEL Normalization**: Normalizes PET scan intensities to reduce unwanted variations using the Removing inter-subject technical variability in magnetic resonance imaging studies (RAVEL) algorithm.
-  ![RAVEL Normalization Example](assets/images/RAVEL_Normalization.png)
+  - **Brain Extraction**: Automated skull-stripping of MRI scans to isolate brain tissue.
+    ![Brain Extraction Example](assets/images/Brain_Extraction.png)
+  - **MNI Template Registration**: Align MRI scans to the MNI standard space for consistent spatial analysis.
+    ![MNI Template Registration Example](assets/images/MRI_Template_Registration.png)
+  - **MRI-PET Co-registration**: Aligns PET scans with corresponding MRI scans for integrated analysis.
+    ![MRI-PET Co-Registration Example](assets/images/MRI-PET_CoRegistration.png)
+  - **COMBAT Harmonization**: Reduces scanner and site effects in neuroimaging data using the Combating Batch Effects (COMBAT) algorithm.
+    ![COMBAT Harmonization Example](assets/images/COMBAT_Harmonization.png)
+  - **RAVEL Normalization**: Normalizes PET scan intensities to reduce unwanted variations using the Removing inter-subject technical variability in magnetic resonance imaging studies (RAVEL) algorithm.
+    ![RAVEL Normalization Example](assets/images/RAVEL_Normalization.png)
 
 
 ## Folder Structure
